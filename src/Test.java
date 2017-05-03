@@ -44,6 +44,17 @@ public class Test {
         String helloFromChar = new String(charArray);
         System.out.println(helloFromChar);
 
+        //Coverting Strings to Numbers      [Type.valueOF(...) ]
+        String tmpA = "10";
+        float aa = Float.valueOf(tmpA).floatValue();
+        int bb = Integer.valueOf(tmpA).intValue();
+        System.out.println(aa+0.5);
+        System.out.println(bb + 1);
 
+        //Coverting Numbers to String      [String.ValueOf(...) ]
+        int temp1 = 12;
+        String string1 = "";
+        string1 = String.valueOf(temp1);
+        System.out.println(string1);        //value as String
     }
 }
