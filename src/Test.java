@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by arkan on 03.05.2017.
  */
@@ -56,5 +59,28 @@ public class Test {
         String string1 = "";
         string1 = String.valueOf(temp1);
         System.out.println(string1);        //value as String
+
+        StringBuilder tempStringBuilder = new StringBuilder();
+        tempStringBuilder.append("ariel");
+        tempStringBuilder.append(26);
+        System.out.println(tempStringBuilder);
+        tempStringBuilder.reverse().deleteCharAt(1);    //reverse all data from val and remove first - in this case '1'
+        System.out.println(tempStringBuilder);
+
+        // autoboxing and unboxing [ int and Integer, double and Double ]
+        List<Integer> li = new ArrayList<>();
+        for(int i=1; i<50; i+=2){
+            li.add(i);                  // it is: li.add(Integer.valueOf(i));       <- converting value into object (autoboxing)
+        }
+
+        //autoboxing in java: - primitive value is converting into object when is passed as a parameter to a method that expects an object
+        //                    - and when primitive value is assigned to a variable of the corresponding wrapper class
+
+        // Unboxing
+
+        Integer i = new Integer(8);
+        int tempxx = Math.abs(i);
+        // now we have access to 'i' value via 'tempxx'
+
     }
 }
